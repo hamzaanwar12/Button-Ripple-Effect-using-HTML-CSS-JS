@@ -1,0 +1,105 @@
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+    /* text-align: center; */
+}
+button{
+    position: relative;
+    /* margin-top: 15rem; */
+    height: 3rem;
+    width: 7rem;
+    text-align: center;
+    align-items: center;
+    background-color: darkmagenta;
+    color: white;
+    font-family: cursive;
+    border: none;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    overflow: hidden;
+
+    /*
+    Failed attempt
+        animation: brightnessChange 2s;
+        animation-iteration-count: 4;
+    */
+}
+button:focus{
+    outline: 0;
+}
+/*
+    =>  It didn't work
+@keyframes brightnessChange {
+    from{
+        backdrop-filter: brightness(0);
+    }
+    to{
+        backdrop-filter: brightness(100);
+        opacity: 1;
+    }
+    
+}
+
+*/
+
+span{
+    position: absolute;
+    /* top: 30px;
+    left: 90px; */
+    top: 0px;
+    left: 0px;
+    opacity: 0.2;
+    background-color: white;
+    width: 25px;
+    height:25px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* scale: 0; */
+
+    translate:(-50%,-50%);
+    transform-origin: center;
+    /* transition: transform 2s; */
+    animation-name: rippleEffect;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes rippleEffect {
+    to{
+       scale: 15;
+       opacity: 0;
+    }
+    
+}
+
+
+/* 
+button.active:hover span
+{   
+    transform: scale(15);
+}
+ */
+
+/*
+@keyframes rippleEffect {
+    from{
+        opacity: 0;
+       width: 0px;
+       height: 0px;
+    }
+    to{
+       width: 150px;
+       height: 48px;
+        opacity: 0.3;
+    }
+    
+}
+
+*/
